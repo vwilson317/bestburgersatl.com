@@ -1,16 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using Autofac;
+using System.Threading.Tasks;
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Autofac.Extensions.DependencyInjection;
-using BestBurgersAtl.Resources;
-using BestBurgersAtl.Resources.DA;
 
-namespace BestBurgersAtl
+namespace BBAtlMVC6
 {
     public class Startup
     {
@@ -22,34 +20,14 @@ namespace BestBurgersAtl
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
         }
+
         public IConfigurationRoot Configuration { get; set; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
             services.AddMvc();
-
-            // Add our repository type
-            // Create the Autofac container builder.
-            //var builder = new ContainerBuilder();
-            //// Add any Autofac modules or registrations.
-            //builder.RegisterModule(new AutofacModule());
-            //// Populate the services.
-            //builder.Populate(services);
-            //// Build the container.
-            //var container = builder.Build();
-            //// Resolve and return the service provider.
-            ////TODO: Fix Di either using autoFac or MVC 6
-            //ServiceDescriptor isServiceAdded = services.FirstOrDefault(s => s.ServiceType == typeof(IPostRepository));
-            //var x = 2;
-            //return container.Resolve<IServiceProvider>();
-
-            services.AddSingleton(typeof (IPostRepository), typeof (PostRepository));
-
-            //var isServiceAdded = services.FirstOrDefault(s => s.ServiceType == typeof (IPostRepository));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,7 +37,7 @@ namespace BestBurgersAtl
             loggerFactory.AddDebug();
 
             app.UseIISPlatformHandler();
-            app.UseDefaultFiles();
+
             app.UseStaticFiles();
 
             app.UseMvc();
