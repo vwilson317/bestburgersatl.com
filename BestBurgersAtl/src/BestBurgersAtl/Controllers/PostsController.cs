@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using BestBurgersAtl.Resources;
-using BestBurgersAtl.Resources.DA;
 using Microsoft.AspNet.Mvc;
+using DataAccess;
+using Resources;
 
 namespace BestBurgersAtl.Controllers
 {

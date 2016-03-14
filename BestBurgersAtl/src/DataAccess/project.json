@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0-*",
+  "description": "DataAccess Class Library",
+  "authors": [ "vince_000" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+  "frameworks": {
+    "net451": { },
+    "dnxcore50 ": {
+      "dependencies": {
+        "Microsoft.CSharp": "4.0.0",
+        "System.Collections": "4.0.0",
+        "System.Linq": "4.0.0",
+        "System.Runtime": "4.0.0",
+        "System.Threading": "4.0.0"
+      }
+    }
+  },
+  "dependencies": {
+    "Dapper": "1.50.0-beta8",
+    "Resources": "1.0.0-*"
+  }
+}

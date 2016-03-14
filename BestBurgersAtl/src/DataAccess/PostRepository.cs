@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-
-namespace BestBurgersAtl.Resources.DA
+using Resources;
+namespace DataAccess
 {
     public class PostRepository : IPostRepository// LookupRepositoryBase<PostResource>, IPostRepository
     {

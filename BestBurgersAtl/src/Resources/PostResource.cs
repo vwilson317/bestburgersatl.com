@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace BestBurgersAtl.Resources
+namespace Resources
 {
     public class PostResource : IPostResource
     {
@@ -38,9 +35,5 @@ namespace BestBurgersAtl.Resources
         {
             get; set;
         }
-    }
-
-    public interface IPostResource
-    {
     }
 }

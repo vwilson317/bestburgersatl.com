@@ -1,6 +1,7 @@
 using System.Collections.Generic;
+using Resources;
 
-namespace BestBurgersAtl.Resources.DA
+namespace DataAccess
 {
     public interface IPostRepository// : ILookupReposiotry<PostResource>
     {
