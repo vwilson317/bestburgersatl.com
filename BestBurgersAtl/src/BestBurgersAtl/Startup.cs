@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 using Autofac.Extensions.DependencyInjection;
 using BestBurgersAtl.Resources;
 using BestBurgersAtl.Resources.DA;
+using Newtonsoft.Json.Serialization;
 
 namespace BestBurgersAtl
 {
@@ -30,7 +31,11 @@ namespace BestBurgersAtl
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
-            services.AddMvc();
+            services.AddMvc().AddJsonOptions(options =>
+            {
+                options.SerializerSettings.ContractResolver =
+                    new CamelCasePropertyNamesContractResolver();
+            }); ;
 
             // Add our repository type
             // Create the Autofac container builder.
@@ -47,7 +52,7 @@ namespace BestBurgersAtl
             //var x = 2;
             //return container.Resolve<IServiceProvider>();
 
-            services.AddSingleton(typeof (IPostRepository), typeof (PostRepository));
+            services.AddSingleton(typeof(IPostRepository), typeof(PostRepository));
 
             //var isServiceAdded = services.FirstOrDefault(s => s.ServiceType == typeof (IPostRepository));
         }
@@ -62,7 +67,12 @@ namespace BestBurgersAtl
             app.UseDefaultFiles();
             app.UseStaticFiles();
 
-            app.UseMvc();
+            app.UseMvc(config =>
+                config.MapRoute(
+                    name: "Default",
+                    template: "{controller}/{action}/{id?}",
+                    defaults: new { controller = "Home", action = "Home" }
+            ));
         }
 
         // Entry point for the application.

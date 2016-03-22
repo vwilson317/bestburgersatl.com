@@ -1,20 +1,33 @@
 {
   "version": "1.0.0",
-  "name": "BestBurgersAtl",
+  "name": "bestburgersatl",
+  "scripts": {
+    "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "lite": "lite-server",
+    "typings": "typings",
+    "postinstall": "typings install"
+  },
   "dependencies": {
-    "angular2": "2.0.0-beta.8",
-    "systemjs": "0.19.22",
+    "@reactivex/rxjs": "5.0.0-alpha.10",
+    "angular2": "2.0.0-beta.11",
+    "systemjs": "0.19.9",
+    "bootstrap": "3.3.5",
+    "jquery": "2.1.4",
+    "body-parser": "1.14.1",
+    "fancybox": "3.0.0",
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.33.3",
     "reflect-metadata": "0.1.2",
-    "rxjs": "5.0.0-beta.2",
-    "zone.js": "0.5.15",
-    "bootstrap": "^3.3.5",
-    "jquery": "^2.1.4"
+    "zone.js": "0.5.15"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "typescript": "^1.8.6",
-    "gulp-typescript": "^2.12.1"
+    "typescript": "1.8.2",
+    "gulp": "3.9.0",
+    "gulp-typescript": "2.9.2",
+    "gulp-watch": "4.3.5",
+    "merge": "1.2.0",
+    "del": "2.1.0"
   }
 }

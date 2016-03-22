@@ -1449,6 +1449,9 @@
           "lib/net451/Microsoft.Net.Http.Headers.dll": {}
         }
       },
+      "Microsoft.TypeScript.Compiler/1.8.6": {
+        "type": "package"
+      },
       "Newtonsoft.Json/6.0.6": {
         "type": "package",
         "compile": {
@@ -2982,6 +2985,9 @@
         "runtime": {
           "lib/dotnet5.4/Microsoft.Net.Http.Headers.dll": {}
         }
+      },
+      "Microsoft.TypeScript.Compiler/1.8.6": {
+        "type": "package"
       },
       "Microsoft.Win32.Primitives/4.0.0": {
         "type": "package",
@@ -5294,6 +5300,9 @@
           "lib/net451/Microsoft.Net.Http.Headers.dll": {}
         }
       },
+      "Microsoft.TypeScript.Compiler/1.8.6": {
+        "type": "package"
+      },
       "Newtonsoft.Json/6.0.6": {
         "type": "package",
         "compile": {
@@ -6983,6 +6992,9 @@
           "lib/net451/Microsoft.Net.Http.Headers.dll": {}
         }
       },
+      "Microsoft.TypeScript.Compiler/1.8.6": {
+        "type": "package"
+      },
       "Newtonsoft.Json/6.0.6": {
         "type": "package",
         "compile": {
@@ -8525,6 +8537,9 @@
         "runtime": {
           "lib/dotnet5.4/Microsoft.Net.Http.Headers.dll": {}
         }
+      },
+      "Microsoft.TypeScript.Compiler/1.8.6": {
+        "type": "package"
       },
       "Microsoft.Win32.Primitives/4.0.0": {
         "type": "package",
@@ -10973,6 +10988,9 @@
           "lib/dotnet5.4/Microsoft.Net.Http.Headers.dll": {}
         }
       },
+      "Microsoft.TypeScript.Compiler/1.8.6": {
+        "type": "package"
+      },
       "Microsoft.Win32.Primitives/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -13305,6 +13323,21 @@
         "Microsoft.Net.Http.Headers.1.0.0-rc1-final.nupkg",
         "Microsoft.Net.Http.Headers.1.0.0-rc1-final.nupkg.sha512",
         "Microsoft.Net.Http.Headers.nuspec"
+      ]
+    },
+    "Microsoft.TypeScript.Compiler/1.8.6": {
+      "type": "package",
+      "sha512": "KX+N9NuVVhXsEieKkX5/rTErMz98w/rzWa/wwMEZe5dG1VCcOAkZ4VTda510MKTF/PrUCKFpZ9gdb0zLFZV+bA==",
+      "files": [
+        "License.htm",
+        "Microsoft.TypeScript.Compiler.1.8.6.nupkg",
+        "Microsoft.TypeScript.Compiler.1.8.6.nupkg.sha512",
+        "Microsoft.TypeScript.Compiler.nuspec",
+        "tools/chakracore.dll",
+        "tools/lib.d.ts",
+        "tools/lib.es6.d.ts",
+        "tools/tsc.exe",
+        "tools/tsc.js"
       ]
     },
     "Microsoft.Win32.Primitives/4.0.0": {
@@ -17099,7 +17132,8 @@
       "Autofac.Extensions.DependencyInjection >= 4.0.0-rc1-177",
       "System.Reflection >= 4.1.0-beta-23516",
       "System.Net.Http >= 4.0.1-beta-23516",
-      "Dapper >= 1.50.0-beta8"
+      "Dapper >= 1.50.0-beta8",
+      "Microsoft.TypeScript.Compiler >= 1.8.6"
     ],
     "DNX,Version=v4.5.1": [
       "Microsoft.Extensions.Configuration.Contrib.GV.ConfigurationManager >= 0.2.1-rc1-final"

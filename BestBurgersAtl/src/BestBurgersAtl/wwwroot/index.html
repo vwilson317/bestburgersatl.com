@@ -6,14 +6,15 @@
     <link href="libs/css/bootstrap.css" rel="stylesheet" />
     <link href="css/home.css" rel="stylesheet" />
     <!-- 1. Load libraries -->
-    <script src="libs/es6-shim.min.js"></script>
-    <script src="libs/system-polyfills.js"></script>
-    <script src="libs/shims_for_IE.js"></script>
-    <script src="libs/angular2-polyfills.js"></script>
-    <script src="libs/system.js"></script>
-    <script src="libs/rx.js"></script>
-    <script src="libs/angular2.dev.js"></script>
-
+    <script src="libs/js/system-polyfills.js"></script>
+    <!--<script src="libs/js/shims_for_IE.js"></script>-->
+    <script src="libs/js/angular2-polyfills.js"></script>
+    <script src="libs/js/system.js"></script>
+    <!--<script src="libs/js/map.js"></script>-->
+    <script src="libs/js/rx.js"></script>
+    <script src="libs/js/http.dev.js"></script>
+    <!--<script src="libs/js/common.js"></script>-->
+    <script src="libs/js/angular2.dev.js"></script>
     <!-- 2. Configure SystemJS -->
     <script>
         System.config({
@@ -21,7 +22,7 @@
                 appScripts: {
                     defaultExtension: 'js'
                 }
-            }
+            }, defaultJsExtensions: true
         });
     </script>
     <script>

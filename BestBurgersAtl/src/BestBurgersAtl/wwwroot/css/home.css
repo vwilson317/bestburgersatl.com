@@ -1,8 +1,9 @@
 ﻿body {
-    background-image: url('https://s3.amazonaws.com/bestburgersatl.com/home-min.jpg');
+    /*background-image: url('https://s3.amazonaws.com/bestburgersatl.com/home-min.jpg');*/
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100%;
+    color: black;
 }
 
 .center-txt {
