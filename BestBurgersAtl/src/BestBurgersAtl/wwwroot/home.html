@@ -1,5 +1,19 @@
-﻿<ul>
-    <li *ngFor="#post of posts">
-        {{ post.id }} - {{ post.description }}
+﻿<ul id="posts">
+    <li id="post-{{post.id}}" *ngFor="#post of posts">
+        <img class="img-responsive post-img" src="{{post.displayImageUrl}}" alt="" />
+        <div class="col-lg-6 col-md-8 col-sm-12 no-padding-left">
+            <h2>
+                <img src="Images/quote-left.png">{{ post.title }}<img src="Images/quote-right.png">
+            </h2>
+            <h3 class="location-txt">
+                {{ post.location }}
+            </h3>
+            <div class="secondary-txt text-center">
+                {{ getDate(post.createDt) }}
+            </div>
+        </div>
+        <div class="content hidden-sm hidden-xs">
+            {{ post.contentText }}
+        </div>
     </li>
 </ul>

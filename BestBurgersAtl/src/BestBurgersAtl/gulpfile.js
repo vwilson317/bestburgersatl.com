@@ -32,13 +32,15 @@ gulp.task('moveToLibs', function (done) {
       'node_modules/es6-shim/es6-shim.js*',
       'node_modules/systemjs/dist/*.*',
       'node_modules/jquery/dist/jquery.*js',
+      'node_modules/jquery-sticky/jquery.sticky.*js',
       'bower_components/bootstrap/dist/js/bootstrap*.js',
       'node_modules/fancybox/dist/js/jquery.fancybox.pack.js',
       'bower_components/alertify.js/lib/alertify.min.js',
       'node_modules/angular2/bundles/angular2-polyfills.js',
       'node_modules/systemjs/dist/system.src.js',
       'node_modules/rxjs/bundles/Rx.js',
-      'node_modules/angular2/bundles/angular2.dev.js'
+      'node_modules/angular2/bundles/angular2.dev.js',
+      'node_modules/moment/moment.js'
     ]).pipe(gulp.dest(paths.jsVendors));
 
     gulp.src([

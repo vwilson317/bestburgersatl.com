@@ -1,0 +1,149 @@
+﻿
+
+#nav-button-container-sticky-wrapper {
+    bottom: 2em;
+    position: absolute;
+}
+
+#nav-button {
+    width: 100px;
+    -ms-opacity: 0.8;
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+
+body {
+    color: black;
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    margin: 0 8em;
+}
+
+.center-txt {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+.no-padding-left {
+    padding-left: 0px;
+}
+
+
+h1, h2, h3, h4, h5 {
+    font-family: "bebas-neue",sans-serif;
+}
+
+h1 {
+}
+
+h2 {
+    font-size: 3.25em;
+}
+
+h3 {
+    font-size: 2.75em;
+}
+
+.secondary-txt {
+    font-family: "merriweather",serif;
+    color: #8d99ae;
+}
+
+#header {
+    padding-bottom: 1em;
+}
+
+#logo {
+    width: 430px;
+    padding: 1em;
+}
+
+#header-box {
+    width: 7em;
+    height: 7em;
+    background-color: #d80032;
+    float: left;
+    position: relative;
+}
+/*Home*/
+.post-img {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 1em;
+}
+
+#posts {
+    list-style: none;
+    margin-top: -2em;
+    padding: 0;
+}
+
+    #posts h2 {
+        margin-bottom: -.25em;
+    }
+
+    #posts h3 {
+        margin-top: 0;
+    }
+
+        #posts h2:first-of-type, #posts h3:first-of-type {
+            text-align: center;
+        }
+
+    #posts h2 img {
+        width: .75em;
+        height: auto;
+    }
+
+    #posts li {
+        padding-bottom: 1em;
+        position: relative;
+    }
+
+.content {
+    border-left: solid #edf2f4;
+    padding-left: 1em;
+}
+
+.location-txt:before {
+    background-image: url(../Images/../Images/location-icon.png);
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    width: 50px;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        margin: 0;
+    }
+
+    #header-box {
+        width: 8em;
+        height: 8em;
+    }
+
+    #logo {
+        width: 500px;
+    }
+
+    #posts li:first-of-type div {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        color: #FFFFFF;
+    }
+
+    #posts li:first-of-type h2 {
+        font-size: 3.25em;
+    }
+
+    #posts li:first-of-type h3 {
+        font-size: 2.5em;
+    }
+}

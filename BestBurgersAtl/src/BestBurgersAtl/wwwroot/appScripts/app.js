@@ -37,6 +37,16 @@ System.register(['angular2/core', 'angular2/common', 'rxjs/add/operator/map', '.
                     console.log('json', this.posts);
                     //var postsTmp = JSON.parse(json);
                 }
+                AppComponent.prototype.ngOnInit = function () {
+                    var windowHeight = $(window).height();
+                    var navButtonHeight = $("#nav-button").height();
+                    var fontSize = parseInt($("body").css("font-size"));
+                    $('#nav-button-container').sticky({ topSpacing: windowHeight - navButtonHeight - (2 * fontSize), center: true });
+                };
+                AppComponent.prototype.getDate = function (date) {
+                    console.log(date);
+                    return moment(date).format('MMM YY');
+                };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',

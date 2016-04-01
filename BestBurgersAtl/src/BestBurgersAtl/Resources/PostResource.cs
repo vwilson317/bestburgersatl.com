@@ -7,6 +7,8 @@ namespace BestBurgersAtl.Resources
 {
     public class PostResource : IPostResource
     {
+        public string Title { get; set; }
+        public string Location { get; set; }
         public string ContentText { get; set; }
         public DateTime CreateDt { get; set; }
         public string Description { get; set; }

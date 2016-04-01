@@ -9,18 +9,18 @@ namespace BestBurgersAtl.Controllers
     public class PostsController //: BaseApiController<PostResource>
     {
         [FromServices]
-        IPostRepository Service2 { get; set; }
+        IPostRepository PostRepository { get; set; }
 
         public PostsController(IPostRepository repoService)
         {
             //TODO: Fix Di
-            Service2 = repoService;// new PostRepository();
+            PostRepository = repoService;
         }
 
         [HttpGet]
         public IEnumerable<PostResource> Get()
         {
-            return Service2.GetAll();
+            return PostRepository.GetAll();
         }
     }
 }
