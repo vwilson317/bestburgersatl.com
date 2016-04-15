@@ -1,18 +1,4 @@
-﻿
-
-#nav-button-container-sticky-wrapper {
-    bottom: 2em;
-    position: absolute;
-}
-
-#nav-button {
-    width: 100px;
-    -ms-opacity: 0.8;
-    opacity: 0.8;
-    filter: alpha(opacity=80); /* For IE8 and earlier */
-}
-
-body {
+﻿body {
     color: black;
     font-family: Helvetica, sans-serif;
     font-size: 18px;
@@ -29,7 +15,13 @@ body {
 .no-padding-left {
     padding-left: 0px;
 }
+.no-padding-right {
+    padding-right: 0px;
+}
 
+.post-list-item {
+    position: relative;
+}
 
 h1, h2, h3, h4, h5 {
     font-family: "bebas-neue",sans-serif;
@@ -65,6 +57,10 @@ h3 {
     height: 7em;
     background-color: #d80032;
     float: left;
+    position: relative;
+}
+
+#app {
     position: relative;
 }
 /*Home*/
@@ -122,28 +118,101 @@ h3 {
         margin: 0;
     }
 
+        body #posts > h2,
+        body #posts > div {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
     #header-box {
-        width: 8em;
-        height: 8em;
+        width: 5em;
+        height: 5em;
+        z-index: 1;
     }
 
     #logo {
-        width: 500px;
+        width: 250px;
     }
 
-    #posts li:first-of-type div {
+    #posts li:first-child .post-title {
+        margin-top: 2.5em;
         position: absolute;
-        transform: translate(-50%, -50%);
-        left: 50%;
-        top: 50%;
+        display: inline-block;
+        top: 0;
         color: #FFFFFF;
+        width: 100%;
+    }
+
+    #posts li:first-of-type .post-img {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.75em;
     }
 
     #posts li:first-of-type h2 {
-        font-size: 3.25em;
+        font-size: 2.5em !important;
     }
 
     #posts li:first-of-type h3 {
-        font-size: 2.5em;
+        font-size: 1.75em !important;
     }
+
+    #posts li:first-of-type .quote-img {
+        display: inline !important;
+    }
+
+    #nav-button-container-sticky-wrapper {
+        bottom: 2em;
+        position: absolute;
+        right: 0;
+        left: 0;
+    }
+
+    #nav-button {
+        width: 85px;
+        -ms-opacity: 0.8;
+        opacity: 0.8;
+        filter: alpha(opacity=80); /* For IE8 and earlier */
+        margin: 0 auto;
+    }
+
+    #posts {
+        background-color: #edf2f4;
+    }
+
+    #posts li {
+        background-color: #FFFFFF;
+        position: inherit;
+    }
+
+    .post-img {
+        width: 45%;
+    }
+
+    .secondary-txt {
+        font-size: .7em;
+    }
+
+    /*#posts li:nth-child(odd) div {
+         float: right; 
+    }
+
+    #posts li:nth-child(even) img {
+        float: right;
+    }*/
+
+    #posts .post-img,
+   #posts div {
+        display: inline-block;
+    }
+
+    /*#posts li div{
+        width: 50%;
+    }*/
 }
